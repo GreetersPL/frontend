@@ -1,0 +1,11 @@
+{{view view.slidesView}}
+<a class="left carousel-control" {{action 'prevSlide' target='view'}}>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" {{action 'nextSlide' target='view'}}>
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+<script>
+  $('.carousel').carousel()
+</script>

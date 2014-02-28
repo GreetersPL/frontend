@@ -1,0 +1,95 @@
+header {
+img {
+  height: 120px;
+width: auto;
+margin-top: -30px;
+}
+  div{
+    display: none;
+}
+}
+body{
+  background-color: grey;
+}
+html, body, #app {
+  min-height: 100%
+}
+.content {
+  min-height: 100%;
+  margin-bottom: -70px;
+  &:after {
+    content: "";
+    display: block;
+  }
+}
+footer, .content:after{
+  height: 70px
+}
+
+#app {
+  background-color: #7a4272;
+  header {
+    background-color: white
+  }
+}
+
+.slide.carousel.col-xs-12 {
+  img{
+  -webkit-border-radius: 20px;
+border-radius: 20px;
+  }
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 
+This element holds injected scripts inside iframes that in 
+some cases may stretch layouts. So, we're just hiding it. 
+*/
+
+#fb-root {
+    display: none;
+}
+
+/* To fill the container and nothing else */
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  @media (max-width: 768px){
+    width: 100% !important;
+  }
+}
+
+#likeBox {
+ @media (min-width: 769px){
+    background-color: white;
+    width: 340px;
+    height: 300px;
+    position: fixed;
+    top:30%;
+    right: -340px;
+    -webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+    &:before {
+      -webkit-border-radius: 5px 0 0 5px;
+border-radius: 5px 0 0 5px;
+      position: absolute;
+      left: -39px;
+      display: block;
+      content: ' ';
+      background-color: white;
+      height: 40px;
+      width: 40px
+    }
+    &:hover {
+      right: -40px
+    }
+    .fb-like-box {
+    -webkit-border-radius: 0 0 0 5px;
+border-radius: 0 0 0 5px;
+    height: 100% !important;
+  }
+  } 
+}
