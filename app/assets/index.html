@@ -8,8 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Greeters Polska</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/app.css">
@@ -21,7 +20,17 @@
 
     <script src="js/vendor.js"></script>
     <script src="js/app.js"></script>
-    <div id="app" class="container"></div>
+    <div class="container">
+    <div class="row">
+      <div id="app" class="col-xs-12"></div>
+      <div id="likeBox" class="col-xs-12">
+        <div class="fb-like-box" data-href="http://www.facebook.com/greeterspolska" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+      </div>
+
+       
+
+      </div>
+    </div>
     <script>
     // Enable Brunch HTML/CSS/JS Auto Reload
     window.brunch = window.brunch || {};
@@ -36,11 +45,7 @@
   js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=224358184345386";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    <div id="likeBox" class="col-xs-12">
-      <div class="fb-like-box" data-href="http://www.facebook.com/greeterspolska" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-    </div>
-    <div class="clearfix"></div>
-    <footer class="text-center ">
+   <footer class="text-center">
             <a href="http://www.mlodziez.org.pl/">
                 <img alt="Młodzież w działaniu" height="60" src="/img/mwd.png">
             </a>
@@ -50,6 +55,6 @@
             <a href="http://www.gdanska.zhp.pl/">
                 <img alt="Chorąiew Gdańska ZHP" height="60" src="/img/choragiew.png">
             </a>
-    </footer>
+    </footer>  
   </body>
 </html>

@@ -9,13 +9,14 @@ module.exports = App.Division.FIXTURES = [
     name: "HR"
     email: "it@greeters.pl"
     cordinator: 2
+    members: [8,9,10]
   }
   {
     id:3
     name: "PR"
-    email: "it@greeters.pl"
+    email: "pr@greeters.pl"
     cordinator: 4
-    members: [5]
+    members: [5,6,7]
   }
   {
     id:4

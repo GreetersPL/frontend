@@ -1,9 +1,8 @@
 module.exports = App.SliderView = Ember.View.extend
   templateName: 'slider'
-  classNames: ['carousel', 'slide', 'col-xs-12']
+  classNames: ['col-xs-12', 'slider']
   init: ()->
     @._super
-    $(document).off('.data-api')
     obj = this.get('content.firstObject');
     Ember.set(obj, 'isActive', true);
 
@@ -24,7 +23,7 @@ module.exports = App.SliderView = Ember.View.extend
       classNames: ['item']
       classNameBindings: ['content.isActive:active'],
       template: Ember.Handlebars.compile('\
-                <img {{bind-attr src="view.content.img"}} alt=""/>\
+                <img {{bind-attr src="view.content.img"}} class="img-responsive" alt=""/>\
                 <div class="carousel-caption">\
                     <h4>{{view.content.title}}</h4>\
                     <p>{{view.content.text}}</p>\

@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = App.TeamIndexView = Ember.View.extend
-  classNames: ['teamIndex']
+  classNames: ['col-xs-12']
   

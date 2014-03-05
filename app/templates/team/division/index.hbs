@@ -1,17 +1,15 @@
-<ol class="breadcrumb">
-  <li>{{#link-to 'team'}}Zespół{{/link-to}}</li>
-  <li class="active">{{model.name}}</li>
-</ol>
-<div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-1 about">
+<div class="col-xs-12">
+<div class="col-xs-12 col-md-4 col-lg-3 about">
 <h2>Wydział {{model.name}}</h2>
-<h3>Kordynator: {{#link-to 'team.division.cordinator' model.name}} {{model.cordinator.name}} {{/link-to}}</h3>
-<h3>Kontakt: {{model.email}}</h3>
+<h3>Kontakt: {{model.email}}
 </div>
-<div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 members"> 
+<div class="col-xs-12 col-md-8 col-lg-9 members"> 
 <h3>Członkowie: </h3>
 <ul>
+<li class='cordinator'>{{model.cordinator.name}}</li>
 {{#each model.members}}
-<li>{{#link-to 'team.division.member' name}}{{name}}{{/link-to}}</li>
+<li>{{name}}</li>
 {{/each}}
 </ul>
+</div>
 </div>

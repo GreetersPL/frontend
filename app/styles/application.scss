@@ -1,67 +1,51 @@
-header {
-img {
-  height: 120px;
-width: auto;
-margin-top: -30px;
+html, body, .container {
+  @media (min-width: 769px){
+    height: 100%;
+    min-height: 100%;
+  }
 }
+
+.container {
+  @media (min-width: 769px){
+    margin-bottom: -70px;
+    &::after{
+      height: 70px;
+      content: " ";
+      float: left;
+      width: 100%;
+      clear: both;
+    }
+  }
+}
+header {
+  height: 100px;
+  h1 {
+    margin: 0px
+  }
+  img{
+    max-width: 100%;
+    width: auto;
+    height: 100px;
+  }
   div{
     display: none;
 }
 }
-body{
-  background-color: grey;
-}
-html, body, #app {
-  min-height: 100%
-}
-.content {
-  min-height: 100%;
-  margin-bottom: -70px;
-  &:after {
-    content: "";
-    display: block;
-  }
-}
-footer, .content:after{
-  height: 70px
+
+.btn-primary {
+  background-color: #6d9429 !important;
+  border-color: #6d9429 !important;
+  color: #7a4272;
 }
 
-#app {
-  background-color: #7a4272;
-  header {
-    background-color: white
-  }
-}
-
-.slide.carousel.col-xs-12 {
-  img{
-  -webkit-border-radius: 20px;
-border-radius: 20px;
-  }
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* 
-This element holds injected scripts inside iframes that in 
-some cases may stretch layouts. So, we're just hiding it. 
-*/
-
-#fb-root {
-    display: none;
-}
-
-/* To fill the container and nothing else */
-
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-  @media (max-width: 768px){
-    width: 100% !important;
-  }
-}
 
 #likeBox {
+  background-color: white;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
  @media (min-width: 769px){
-    background-color: white;
+    -webkit-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
     width: 340px;
     height: 300px;
     position: fixed;
@@ -87,9 +71,11 @@ border-radius: 5px 0 0 5px;
       right: -40px
     }
     .fb-like-box {
-    -webkit-border-radius: 0 0 0 5px;
-border-radius: 0 0 0 5px;
     height: 100% !important;
   }
   } 
+}
+footer {
+    display: block;
+    width:100%;
 }

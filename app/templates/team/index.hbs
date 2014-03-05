@@ -4,7 +4,5 @@
 {{#each division in model.division}}
 <div class='division'>
 <h2>{{#link-to 'team.division' division.name}} Wydział {{division.name}}{{/link-to}}</h2>
-<h3>Kordynator:{{#link-to 'team.division.cordinator' division.name}} {{division.cordinator.name}} {{/link-to}}</h3>
-<h3> Kontakt: {{division.email}} </h3>
 </div>
 {{/each}}
