@@ -1,23 +1,80 @@
-.teamIndex{
-  .cordinator > h2 {
-    background-color: white;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .division {
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
-    padding: 10px;
-    background-color: white;
-    margin-bottom: 10px;
-    width: 98%;
-    margin-left: auto;
-    margin-right: auto;
-    @media (min-width: 768px){
-      width: 40%;
-      float: left;
-      margin: 4% 5%
+$fioletowy: #7a4272;
+.divisionsIndex{
+.cordinator {
+  @media (min-width: 992px) {
+    top: 130px;
+    position: absolute;
+    left: 50%;
+    h2 {
+      position: relative;
+      left: -50%;
+      
     }
+  a{display: block;    
+    padding: 20px;
+        color: black;
+        text-decoration: none;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        &:hover{
+          background-color: lighten($fioletowy, 30%);
+        }
+      }
+  
+  }
+    
+}
+
+.division{
+  @media (min-width: 992px) {
+    position: absolute;
+    h2 {
+      position: relative;
+      a{
+        padding: 20px 10px;
+        color: black;
+        text-decoration: none;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        &:hover{
+          background-color: lighten($fioletowy, 30%);
+        }
+      }
+    }
+  &:nth-of-type(2){
+    left: 50%;
+    h2{
+      left: -50%;
+    }
+  }
+  &:nth-of-type(3){
+    left: 5%;
+    top: 150px;
+  h2 {
+    left: -5%;
+  }
+  }
+&:nth-of-type(4){
+    right: 5%;
+    top: 150px;
+  h2 {
+    right: -5%;
+  }
+  }
+&:nth-of-type(5){
+    left: 50%;
+    top: 300px;
+  h2 {
+    left: -50%;
+  }
+  }
+  }
+}
+}
+@media (min-width: 992px) {
+  divisionIndex {
+    height: 450px;
   }
 }

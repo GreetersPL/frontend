@@ -5,3 +5,6 @@ module.exports = App.Division = DS.Model.extend
   email: DS.attr('string')
   cordinator: DS.belongsTo('member',{async:true})
   members: DS.hasMany('member',{async:true})
+  mailto: (->
+      "mailto:#{@.get("email")}"
+  ).property()

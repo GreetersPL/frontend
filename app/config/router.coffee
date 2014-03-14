@@ -6,4 +6,3 @@ module.exports = App.Router.map ->
       @.route('member', path: '/:name')
     )
   )
-  @.route('history', {path: '/historia'})

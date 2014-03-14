@@ -9,14 +9,20 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['qunit'],
+    frameworks: ['mocha', 'chai'],
 
-
+    
+    preprocessors: {
+      '**/*.coffee': ['coffee']
+    },
+    
     // list of files / patterns to load in the browser
     files: [
       'public/js/vendor.js',
       'public/js/app.js',
-      'test/helpers.coffee',
+      'node_modules/chai/chai.js',
+      'node_modules/chai-jquery/chai-jquery.js',
+      'test/setup.coffee',
       'test/**/*_test.coffee'
     ],
 
@@ -29,7 +35,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['dots'],
 
 
     // web server port

@@ -2,16 +2,15 @@ module.exports = App.Slider.FIXTURES = [
   {
     id:1
     active: true
-    title: "News 1"
-    text: "newnewsnews"
-    url: "http://greeters.pl"
+    title: "Jesteśmy na FB"
+    text: "Polub nas już dziś!"
     img: "/img/slider/fb.jpg"
   }
   {
     id:2
-    title: "News 2"
-    text: "newnewsnews"
+    title: "Rozstrzygnięcie konkursu"
+    text: "Nadszedł wyczekiwany przez wszystkich czas na rozstrzygnięcie konkursu."
     url: "http://greeters.p"
-    img: "/img/slider/fb.jpg"
+    img: "/img/slider/poludnik.jpg"
   }
 ]

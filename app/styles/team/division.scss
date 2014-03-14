@@ -1,12 +1,40 @@
-.divisionIndex{
-  .members, .about {
-    background-color: white;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
-    padding: 10px 30px;
-  }
-}
+$fioletowy: #7a4272;
 
-.divisionIndex .breadcrumb {
-  margin-top: -20px;
+.divisionIndex, .cordinatorAbout {
+  @media (min-width: 992px) {
+    .about{
+      h2 {
+        font-size: 40px
+      }
+     
+    }
+  }
+  .member, .memberCordinator {
+    background-color: lighten($fioletowy, 20%);
+    padding: 20px;
+  -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+    &:before {
+          content: " ";
+      display: table;
+    }
+    &:after {
+ content: " ";
+      display: table;
+      clear: both;
+
+    }
+  }
+  .about {
+    background-color: $fioletowy;
+    color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 100%
+  }
+
 }

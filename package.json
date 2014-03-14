@@ -27,6 +27,11 @@
   },
   "devDependencies": {
     "karma": "*",
-    "karma-qunit": "*"
+    "karma-mocha": "*",
+    "karma-chai": "*",
+    "karma-ember-preprocessor": "*",
+    "chai": "*",
+    "chai-jquery": "*",
+    "karma-phantomjs-launcher": "*"
   }
 }

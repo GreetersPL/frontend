@@ -1,8 +1,8 @@
-<ol class="breadcrumb">
-  <li>{{#link-to 'team'}}Zespół{{/link-to}}</li>
-  <li class="active">Kordynator</li>
-</ol>
+<div class="col-xs-12 col-md-4 about">
 <h2>Kordynator Projektu</h2>
+<h3 class="text-center"><a {{bindAttr href= 'mailto'}}>Kontakt </a></h3>
+</div>
+<div class="col-xs-12 col-md-7 col-md-offset-1 memberCordinator">
 Imie: {{model.cordinator.name}}
-E-mail: {{model.cordinator.email}}
-Opis: {{model.cordinator.about}}
+<p>{{model.cordinator.about}}</p>
+<div>

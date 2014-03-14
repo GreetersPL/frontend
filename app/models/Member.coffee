@@ -5,3 +5,6 @@ module.exports = App.Member = DS.Model.extend
   email: DS.attr('string')
   division: DS.belongsTo('division')
   about: DS.attr()
+  mailto: (->
+      "mailto:#{@.get("email")}"
+  ).property()

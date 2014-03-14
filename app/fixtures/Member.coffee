@@ -64,7 +64,7 @@ module.exports = App.Member.FIXTURES = [
     division: 3
   }
   {
-    id: 5
+    id: 6
     name: 'Emilka'
     about: "Studentka V roku turystyki i rekreacji. Jej dużą zaletą jest zorganizowanie i zaangażowanie"+
       " w obowiązki. Lubi planować, organizować, gotować. Dla Emilki hobby to podróże, które są dla niej"+
@@ -76,7 +76,7 @@ module.exports = App.Member.FIXTURES = [
     division: 3
   }
   {
-    id: 6
+    id: 5
     name: "Ewelina"
     about: "Studiuje chemię biologiczną na Uniwersytecie Gdańskim. Posiadaczka wielu zalet takich jak komunikatywność,"+
       " załatwianie rzeczy niezałatwialnych, dar przekonywania, OPTYMIZM…. W każdym razie miewa nieco na bakier z"+
@@ -137,6 +137,11 @@ module.exports = App.Member.FIXTURES = [
        " lubi bezmięsnych potraw, spotkań rodzinnych i połączenia pod EDGE. W poprzednim życiu zdecydowanie był hobbitem, a dowodem na to są jego stopy. Według Bartka"+
        " Greeters Polska to Projekt dający wiele możliwości rozwoju, dlatego chętnie został koordynatorem działu IT."
     email: "bartek.markowski@greeters.pl"
-    cordinator: 2
+    cordinator: 1
    }
+   {
+      id: 12
+      name: "Łukasz"
+      about: "Pracownik firmy Transcom o ogromnej zalecie jaką jest cierpliwość. Hobbystycznie zajmuje się Aikido, interesuje go Japonia. Sid to ktoś, kim Łukasz był w poprzednim życiu. Podróże do dla niego przyjemność i wypoczynek. Chce tworzyć coś fajnego, dlatego działa w sekcji IT Greeters Polska."
+    }
 ]

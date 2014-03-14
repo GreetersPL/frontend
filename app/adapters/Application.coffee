@@ -3,7 +3,6 @@ module.exports = App.ApplicationAdapter = DS.FixtureAdapter.extend(
     records.filter((record)=>
         for key, value of query
           value = @.capitaliseFirstLetter(value)
-          console.log(key, value)
           if (record[key] isnt value) then return false
         true
     )

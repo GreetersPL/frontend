@@ -1,5 +1,15 @@
 .slider {
   padding: 0;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  .carousel-inner > .item > img {
+  max-width: 300%;
+height: auto;
+width: 100%;
+height: 20vw;
+  }
+}
+#buttons {
+  margin-top: 60px;
+    button {
+      margin-bottom: 20px
+    }
 }
