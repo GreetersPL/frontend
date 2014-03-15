@@ -8,8 +8,8 @@ module.exports = App.Slider.FIXTURES = [
   }
   {
     id:2
-    title: "Rozstrzygnięcie konkursu"
-    text: "Nadszedł wyczekiwany przez wszystkich czas na rozstrzygnięcie konkursu."
+    title: "Dziękujemy wszystkim za przybycie!"
+    text: "Liczymy, że na kolejnym spotkaniu będzie nas jeszcze więcej."
     url: "http://greeters.p"
     img: "/img/slider/poludnik.jpg"
   }
