@@ -10,7 +10,10 @@ exports.config =
     "ember-handlebars"
     "copy"
     "sass"
-    "combine"]
+    "combine"
+    "minify-js"
+    "minify-css"
+  ]
   template:
     nameTransform: (path) ->
       m = path.match /templates?\/(.*)$/
