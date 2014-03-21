@@ -1,0 +1,8 @@
+require './header'
+require './home'
+require './navbar'
+require './slider'
+require './team'
+require './team/index'
+require './team/cordinator'
+require './team/division/index'

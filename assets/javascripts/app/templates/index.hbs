@@ -1,0 +1,9 @@
+{{view App.HeaderView}}
+{{view App.SliderView contentBinding="App.Slider.FIXTURES"}}
+{{view App.NavbarView}}
+<div id="buttons" class="text-center col-xs-12">
+    <button class="btn btn-lg btn-primary col-xs-12 col-md-5" disabled="true">Szukaj Greetera<br>(Już wkrótce)</button>
+    {{#link-to 'signup' class="btn btn-lg btn-primary col-xs-12 col-md-5 col-md-offset-2" tagName="buttton"}}Zostań Greetersem!<br> {{/link-to}}
+</div>
+
+

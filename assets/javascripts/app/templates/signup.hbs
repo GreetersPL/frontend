@@ -1,0 +1,136 @@
+{{view App.HeaderView}}
+{{view App.NavbarView}}
+<div class="col-xs-12">
+<h4>Witaj!</h4>
+<p>
+Projekt Greeters Polska ma na celu stworzenie w Polsce sieci wolontariuszy, którzy już wkrótce 
+
+będą pokazywać swoje miasto odwiedzającym je gościom. Zaczynamy od Gdańska!
+</p>
+<p>
+Jeśli:
+<ul>
+<li>znasz i chcesz odnaleźć w Gdańsku nietuzinkowe i interesujące miejsca,</li>
+<li>lubisz poznawać i przebywać z ludźmi,</li>
+<li>podróżujesz i niekonwencjonalnie patrzysz na rzeczywistość,</li>
+<li>chcesz się rozwijać i uczyć czegoś nowego,</li>
+<li>lubisz dzielić się swoimi pomysłami i doświadczeniami,</li>
+<li>chcesz stać się częścią ciekawej i nowej na gruncie polskim inicjatywy,</li>
+</ul>
+a poza tym mieć mnóstwo satysfakcji i dobrej zabawy – nie zwlekaj i dołącz do naszego zespołu!
+</p>
+<p>
+Aby włączyć się do projektu Greeters Polska, wypełnij krótką ankietę. Pomoże nam poznać lepiej 
+
+Ciebie, Twoje oczekiwania i możliwości oraz nawiązać z Tobą kontakt.
+
+Wszelkie pytania kieruj na: hr@greeters.pl. Odwiedź nas też na stronie internetowej 
+
+www.greeters.pl i facebooku! Czekamy na Ciebie!
+</p>
+</div>
+<div class="col-xs-12">
+  {{#each error in errors}}
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Błąd!</strong> {{error}}
+    </div>
+  {{/each}}
+</div>
+<div class="col-xs-12">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name" class="col-xs-4 control-label" >Imię</label>
+        <div class="col-xs-8 col-sm-6">
+          <input id="name" name="[name]" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age" class="col-xs-4 control-label" >Wiek</label>
+        <div class="col-xs-8 col-sm-6">
+          <input id="age" name="[age]" class="form-control" type="number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email"  class="col-xs-4 control-label">E-mail</label>
+        <div class="col-xs-8 col-sm-6">
+          <input id="email" name="[email]" class="form-control" type="email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="activity" class="col-xs-4 control-label" >Czym się zajmujesz na codzień?</label>
+        <div class="col-xs-8 col-sm-6">
+          <select id="activity" name="[activity]" class="form-control">
+            <option value="pupil">Uczeń</option>
+            <option value="student">Student</option>
+            <option value="job">Praca</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="source" class="col-xs-4 control-label" >Skąd dowiedziałeś/łaś się o projekcie Greeters Polska</label>
+        <div class="col-xs-8 col-sm-6">
+          <select id="source" name="[source]" class="form-control">
+            <option value="friends">od znajomych</option>
+            <option value="internet">z internetu</option>
+            <option value="contest">przez konkurs „GdańskiGreeter”</option>
+            <option value="facebook">z facebook.com</option>
+            <option value="other">inne</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="languages" class="col-xs-4 control-label" >Języki jakie znasz</label>
+        <div class="table-responsive col-xs-8 col-sm-6 text-center">
+          <table id="languages" class="table">
+            <thead>
+            <tr>
+                <th>Język</th><th>podstawowy</th><th>komunikatywny</th><th>biegły</th><th>usuń</th>
+            </tr>
+            </thead>
+            {{#each lang in langs}}
+                <tr>
+                    <td>{{lang.name}}</td>
+                    <td>{{input type="radio" value="beg" name=lang.attr}}</td>
+                    <td>{{input type="radio" value="com" name=lang.attr}}</td>
+                    <td>{{input type="radio" value="ade" name=lang.attr}}</td>
+                    <td><button class="btn btn-danger" {{action 'delLang' lang}}><span class="glyphicon glyphicon-remove"></span>Usuń</td>
+                </tr>
+            {{else}}
+                <tr>
+                <td colspan="4">Dodaj jakiś język używając pola oraz guzika poniżej!</td>
+                </tr>
+            {{/each}}
+            </table>
+          </div>
+        <div class="clearfix"></div>
+        <div class="col-xs-6 col-sm-3 col-sm-offset-4"><input id="langName" placeholder="Tutaj wpisz język" class="form-control"></div><button class="btn btn-primary col-xs-6 col-sm-2"{{action 'addLang'}}>Dodaj język</button>
+      </div>
+      <div class="form-group">
+        <label for="why" class="col-xs-4 control-label" >Czemu zainteresowałeś/łaś się projektem?</label>
+        <div class="col-xs-8 col-sm-6">
+          <textarea id="why" name="[why]" rows=3 class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="except" class="col-xs-4 control-label" >Czego od nas oczekujesz</label>
+        <div class="col-xs-8 col-sm-6">
+          <select id="except" name="[except]" class="form-control">
+            <option value="fun">Dobrej zabawy</option>
+            <option value="people">Poznania nowych ludzi</option>
+            <option value="passion">Rozwijania swoich pasji i zainteresowań</option>
+            <option value="devel">Rozwoju osobistego, zdobycie nowych umiejętności</option>
+            <option value="qual">Podniesienie swoich kwalfikacji przydatnych na rynku pracy</option>
+            <option value="other">Inne</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="places" class="col-xs-4 control-label" >Wymień 3 ciekawe miejsca w Trójmieście oraz uzasadnij swój wybór</label>
+        <div class="col-xs-8 col-sm-6">
+          <textarea id="places" name="[places]" rows=5 class="form-control"></textarea>
+        </div>
+      </div>
+        <button class="btn btn-primary btn-block" {{action 'signup'}}>Wyślij zgłoszenie</button>
+    </form>
+</div>

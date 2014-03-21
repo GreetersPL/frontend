@@ -1,0 +1,42 @@
+doctype html
+//if lt IE 7
+    html(class="no-js ie6 oldie", lang="pl")
+//if IE 7
+    html(class="no-js ie7 oldie", lang="pl")
+//if IE 8
+    html(class="no-js ie8 oldie", lang="pl")
+// [if gt IE 8] <!
+  html(class="no-js", lang="pl")
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title Greeters Polska
+    meta(name="description",content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel='stylesheet', href='/stylesheets/style.css' + cachebust)
+    script(src='/javascripts/bundle.js' + cachebust)
+
+
+    if reload
+      script(src='/socket.io/socket.io.js')
+      script(src='/javascripts/reload-client.js')
+
+  body
+    .container-fluid
+      .row
+        #app.col-xs-12
+        #likeBox.col-xs-12
+          .fb-like-box(data-href="http://www.facebook.com/greeterspolska" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false")
+      footer.text-center.col-xs-12
+        a(href="http://www.mlodziez.org.pl/")
+          img(alt="Młodzież w działaniu" height="60" src="/img/mwd.png")
+        a(href="http://www.flavionote.keed.pl/")
+          img(alt="Harcerski Krąg Akademicki 'Flavio Note'" height="60" src="/img/flavio.png")
+        a(href="http://www.gdanska.zhp.pl/")
+          img( alt="Chorąiew Gdańska ZHP" height="60" src="/img/choragiew.png")
+      
+    #fb-root
+    script
+      :js
+        (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=224358184345386";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'))
