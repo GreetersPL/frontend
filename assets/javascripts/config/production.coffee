@@ -1,7 +1,8 @@
-module.exports = config = {
+config = {
 	apiUrl: "http://api.greeters.pl"
 	log_transition: false
 	log_transition_internal: false
-	hashbang: false
-	history: true
+  location: 'history'
 }
+
+config
