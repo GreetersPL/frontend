@@ -72,7 +72,8 @@ exports.config =
     copy:
       mainOverrides:
         'bootstrap': [
-           "assets/css/bootstrap.sass"
+           'dist/css/bootstrap.css',
+           'dist/js/bootstrap.js',
            {'fonts': '../../fonts'}
         ]
   combine:
