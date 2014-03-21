@@ -329,7 +329,7 @@ footer {
 }
 @media (min-width: 992px) {
   .divisionIndex, .divisionsIndex  {
-    height: 450px;
+    min-height: 450px;
   }
 }
 

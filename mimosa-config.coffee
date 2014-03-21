@@ -64,7 +64,10 @@ exports.config =
         path: 'javascripts/vendor/jquery.serializeJSON/jquery.serializeJSON'
         depends:
           jquery: '$'
-
+      config:
+        exports: 'config'
+        path: 'javascripts/config/development'
+        
     noParse:
       [
         'javascripts/vendor/jquery/jquery'
