@@ -21,10 +21,10 @@ module.exports = App.SignupController = Ember.Controller.extend
       for type in error
         type = type.split(':')[0]
         switch type
-          when 'String is empty' then @.errors.pushObject("Pole '#{inputHuman}' nie może być puste!")
-          when 'Invalid number' then @.errors.pushObject("Pole '#{inputHuman}' musi zawierać liczbę!")
-          when 'Invalid characters' then @.errors.pushObject("Pole '#{inputHuman}' musi zawierać litery!")
-          when 'Invalid email' then @.errors.pushObject("Pole '#{inputHuman}' musi zawierać email w formacie: 'login@serwer.domena'!")
+          when 'Validation notEmpty failed' then @.errors.pushObject("Pole '#{inputHuman}' nie może być puste!")
+          when 'Validation isNumeric failed' then @.errors.pushObject("Pole '#{inputHuman}' musi zawierać liczbę!")
+          when 'Validation isAlpha failed' then @.errors.pushObject("Pole '#{inputHuman}' musi zawierać litery!")
+          when 'Validation isEmail failed' then @.errors.pushObject("Pole '#{inputHuman}' musi zawierać email w formacie: 'login@serwer.domena'!")
 
     if errors.languages? then
   actions:
@@ -52,7 +52,7 @@ module.exports = App.SignupController = Ember.Controller.extend
       @.set('errors', [])
       apiURL = App.apiUrl
       form = $('form').serializeJSON()
-      post = $.post(apiURL+'/signup', form)
+      post = $.post(apiURL+'/signup', form, {xhrFields: {'withCredentials': true}})
       post.then( (()=>
           @.set('success', true)
         ), ((data)=>
