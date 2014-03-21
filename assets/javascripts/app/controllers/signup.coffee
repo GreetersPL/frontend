@@ -2,6 +2,7 @@ require 'serializeJSON'
 module.exports = App.SignupController = Ember.Controller.extend
   langs: []
   errors: []
+  success: false
 
   addErrors: (errors)->
     if errors.code is "ER_DUP_ENTRY"
@@ -53,6 +54,7 @@ module.exports = App.SignupController = Ember.Controller.extend
       form = $('form').serializeJSON()
       post = $.post(apiURL+'/signup', form)
       post.then( (()=>
+          @.set('success', true)
         ), ((data)=>
           @.addErrors(data.responseJSON.errors )
       ))

@@ -1,6 +1,9 @@
 {{view App.HeaderView}}
 {{view App.NavbarView}}
 <div class="col-xs-12">
+{{#if success}}
+<div class="alert alert-success">Twoje zgłoszenie zostało przyjęte! Niedługo ktoś się na pewno z tobą skontaktuje.</div>
+{{else}}
 <h4>Witaj!</h4>
 <p>
 Projekt Greeters Polska ma na celu stworzenie w Polsce sieci wolontariuszy, którzy już wkrótce 
@@ -133,4 +136,5 @@ www.greeters.pl i facebooku! Czekamy na Ciebie!
       </div>
         <button class="btn btn-primary btn-block" {{action 'signup'}}>Wyślij zgłoszenie</button>
     </form>
+    {{/if}}
 </div>

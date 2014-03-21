@@ -8,7 +8,7 @@ Templates   = require './templates'
 config 		= require 'config'
 
 window.App = Ember.Application.create(
-  apirUrl: config.apiUrl
+  apiUrl: config.apiUrl
   rootElement: "div#app"
 )
 
