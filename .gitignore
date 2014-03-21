@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See http://help.github.com/ignore-files/ for more about ignoring
 # files.
 #
@@ -34,7 +35,6 @@ what
 *~
 *.diff
 *.patch
-*.err
 *.orig
 *.log
 *.rej
@@ -52,3 +52,8 @@ what
 .tmproj
 nbproject
 Thumbs.db
+
+# NPM packages folder.
+node_modules/
+
+
