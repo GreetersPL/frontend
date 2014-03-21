@@ -6,3 +6,4 @@ exports.config =
         path: 'javascripts/config/production'
   coffeescript:
       sourceMap: false
+      sourceMapDynamic: false
