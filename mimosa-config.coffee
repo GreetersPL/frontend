@@ -1,5 +1,6 @@
 exports.config =
   modules: [
+    "server-template-compile"	
     "server"
     "browserify"
     "csslint"
@@ -13,6 +14,7 @@ exports.config =
     "combine"
     "minify-js"
     "minify-css"
+    
   ]
   template:
     nameTransform: (path) ->
