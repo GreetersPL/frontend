@@ -113,15 +113,6 @@ module.exports = App.Member.FIXTURES = [
    division: 2
   }
   {
-    id: 9
-    name: "Karina"
-    about: "W życiu jest wolnym strzelcem, natomiast u nas jest członkiem HR. Cecha, która ją wyróżnia to szczerość. Najbardziej nie lubi wstawania rano."+
-      " jej hobby to koty i nawet w poprzednim życiu była kotem! Pierwsze co przychodzi jej na myśl o podróżach to… zmaganie się z chorobą"+
-      " lokomocyjną. W Projekcie Greeters Polska bierze udział, ponieważ uważa go za świetną inicjatywę."
-    email: "karina.baczewska@greeters.pl"
-    division: 2
-  }
-  {
     id: 10
     name: "Julita"
     about: "To pozytywnie zakręcona studentka pedagogiki specjalnej. Do jej hobby należą kulinaria i decoupage. W poprzednim życiu była komikiem albo wodzirejem."+

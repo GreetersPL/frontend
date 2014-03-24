@@ -53,7 +53,7 @@ module.exports = App.SignupController = Ember.Controller.extend
       apiURL = App.apiUrl
       form = $('form').serializeJSON()
       post = $.post(apiURL+'/signup', form, {xhrFields: {'withCredentials': true}})
-      post.then( (()=>
+      post.then( ((data)=>
           @.set('success', true)
         ), ((data)=>
           @.addErrors(data.responseJSON.errors )
