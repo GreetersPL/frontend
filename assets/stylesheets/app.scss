@@ -1,4 +1,6 @@
 $fioletowy: #7a4272;
+$jasnoszary: #f7f7f7;
+
 @font-face {
     font-family:Author One;
     src: url('/fonts/AutourOne-Regular.otf');
@@ -8,6 +10,9 @@ $fioletowy: #7a4272;
     font-family: Author One
 }
 
+body {
+    background-color: $jasnoszary;
+}
 
 html, body, .container-fluid {
   @media (min-width: 769px){
