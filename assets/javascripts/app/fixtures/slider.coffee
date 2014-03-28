@@ -2,8 +2,8 @@ module.exports = App.Slider.FIXTURES = [
   {
     id:1
     active: true
-    title: "Warsztaty"
-    text: "Zapisy już niedługo."
+    title: "Zapisy na warsztaty trwaj�"
+    text: "http://warsztaty.greeters.pl"
     img: "/img/slider/warsztaty.png"
   }  
 
