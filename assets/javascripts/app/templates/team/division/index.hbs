@@ -8,11 +8,11 @@
     <h3 class="col-xs-12">Członkowie: </h3>
       <div class='col-xs-12 col-md-5 col-md-offset-1 cordinator member'>
         <span class="name" >Imię: {{model.cordinator.name}}<span>
-        <p>{{model.cordinator.about}}</p>  
+        <p class="aboutCordinator">{{model.cordinator.about}}</p>  
       </div>
         {{#each model.members}}
           <div class='col-xs-12 col-md-5 col-md-offset-1 member'><span class="name" >Imię: {{name}}</span>
-          <p>{{about}}</p>
+          <p class="aboutMember">{{about}}</p>
           </div>
         {{/each}}
   </div>
