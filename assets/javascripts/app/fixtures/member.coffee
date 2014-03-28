@@ -11,7 +11,7 @@ module.exports = App.Member.FIXTURES = [
       " a także wędrówki górskie, choć nie miał jeszcze"+
       " okazji połączyć jednego i drugiego."+ 
       " Podróże są dla niego stylem życia, nauką zaradności i ucieczką od codziennych obowiązków. W"+ 
-      "Projekcie dba o szczegóły i dokumentowanie wszelkich działań. Stara się, by każde działanie"+ 
+      " Projekcie dba o szczegóły i dokumentowanie wszelkich działań. Stara się, by każde działanie"+ 
       "przybliżało nas do celu. „Chciałbym, aby podróżowanie było łatwiejsze i przyjemniejsze, żeby ludzie"+ 
       "mieli wspaniałe wspomnienia, a mieszkańcy z dumą mogli pokazywać ważne dla nich miejsca. Poza"+ 
       "tym, działanie z takim zespołem, to czysta satysfakcja ;)”"
