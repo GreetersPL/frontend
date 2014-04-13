@@ -15,7 +15,7 @@ html
     meta(name="description",content="")
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     link(rel='stylesheet', href='/stylesheets/style.css' + cachebust)
-    script(src='/javascripts/bundle.js' + cachebust)
+    script(async=true src='/javascripts/bundle.js' + cachebust)
 
 
     if reload
@@ -35,19 +35,3 @@ html
           img(alt="Harcerski Krąg Akademicki 'Flavio Note'" height="60" src="/img/flavio.png")
         a(href="http://www.gdanska.zhp.pl/")
           img( alt="Chorąiew Gdańska ZHP" height="60" src="/img/choragiew.png")
-      
-    #fb-root
-    script.
-        (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=224358184345386";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'))
-    script.
-        var _paq = _paq || [];
-        _paq.push(["trackPageView"]);
-        _paq.push(["enableLinkTracking"]);
-
-        (function() {
-            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.greeters.pl/";
-            _paq.push(["setTrackerUrl", u+"piwik.php"]);
-            _paq.push(["setSiteId", "2"]);
-            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-        })();

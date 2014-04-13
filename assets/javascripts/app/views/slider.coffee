@@ -11,7 +11,7 @@ module.exports = App.SliderView = Ember.View.extend
       $('.carousel').carousel('next')
     prevSlide: ()->
       $('.carousel').carousel('prev')
-  didInsertElement: () ->
+    didInsertElement: () ->
         $('.carousel').carousel()
       
   slidesView: Ember.CollectionView.extend

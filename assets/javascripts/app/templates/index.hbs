@@ -1,5 +1,11 @@
 {{view App.HeaderView}}
-{{view App.SliderView contentBinding="App.Slider.FIXTURES"}}
+{{#if App.Slider.FIXTURES}}
+    {{view App.SliderView contentBinding="App.Slider.FIXTURES"}}
+{{else}}
+  <div class="col-xs-12 noslider">
+    <img class="img-responsive" src="img/slider/zaslepka.jpg">
+  </div>
+{{/if}}
 {{view App.NavbarView}}
 <div id="buttons" class="text-center col-xs-12">
     <button class="btn btn-lg btn-primary col-xs-12 col-md-5" disabled="true">Szukaj Greetera<br>(Już wkrótce)</button>
@@ -7,3 +13,4 @@
 </div>
 
 
+ 

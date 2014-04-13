@@ -14,7 +14,7 @@ exports.config =
     "combine"
     "minify-js"
     "minify-css"
-    
+    "import-source"
   ]
   template:
     nameTransform: (path) ->
@@ -61,12 +61,12 @@ exports.config =
           jquery: '$'
       serializeJSON:
         exports: null
-        path: 'javascripts/vendor/jquery.serializeJSON/jquery.serializeJSON'
+        path: 'javascripts/vendor/jquery.serializeJSON/jquery.serializejson'
         depends:
           jquery: '$'
       config:
         exports: 'config'
-        path: 'javascripts/config/development'
+        path: 'javascripts/config'
         
     noParse:
       [
@@ -95,3 +95,9 @@ exports.config =
         ]
       }
     ]
+  importSource:
+    copy: [
+      from: "config/development.coffee"
+      to: "assets/javascripts/config.coffee"
+    ]
+  

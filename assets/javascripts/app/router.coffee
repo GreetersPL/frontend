@@ -1,4 +1,5 @@
 module.exports = App.Router.map ->
+  @.route('who', {path: '/kto-to'})
   @.resource('team', {path: '/zespol'}, ()->
     @.route('cordinator', path: '/kordynator')
     @.resource('team.division', {path:'/:division'}, ()->
