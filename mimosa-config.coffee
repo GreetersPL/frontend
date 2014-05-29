@@ -1,6 +1,6 @@
 exports.config =
   modules: [
-    "server-template-compile"	
+    "server-template-compile"
     "server"
     "browserify"
     "csslint"
@@ -49,7 +49,7 @@ exports.config =
         exports: 'DS'
         depends:
           ember: 'Ember'
-      bootstrap: 
+      bootstrap:
         path: 'javascripts/vendor/bootstrap/bootstrap'
         exports: 'bootstrap'
         depends:
@@ -57,6 +57,11 @@ exports.config =
       lodash:
         path: 'javascripts/vendor/lodash/lodash.compat'
         exports: '_'
+        depends:
+          jquery: '$'
+      datepicker:
+        path: 'javascripts/vendor/bootstrap-datepicker/bootstrap-datepicker'
+        exports: null
         depends:
           jquery: '$'
       serializeJSON:
@@ -67,7 +72,7 @@ exports.config =
       config:
         exports: 'config'
         path: 'javascripts/config'
-        
+
     noParse:
       [
         'javascripts/vendor/jquery/jquery'
@@ -75,6 +80,7 @@ exports.config =
         'javascripts/vendor/ember/ember'
         'javascripts/vendor/ember-data/ember-data'
         'javascripts/vendor/bootstrap/bootstrap'
+        'javascripts/vendor/bootrap-datepicker/bootstrap-datepicker'
       ]
   bower:
     copy:
@@ -100,4 +106,3 @@ exports.config =
       from: "config/development.coffee"
       to: "assets/javascripts/config.coffee"
     ]
-  

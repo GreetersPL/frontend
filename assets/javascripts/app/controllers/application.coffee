@@ -1,4 +1,18 @@
-module.exports = App.ApplicationController = Ember.Controller.extend
+module.exports = App.ApplicationController = Ember.Controller.extend(
+  lang: [
+    {val: 'pol', name: "polski"}
+    {val: 'eng', name: "english"}
+  ]
+  actions:
+    accept_cookies: ()->
+      App.Session.set('cookiesAccept', true)
+
+  cookies: (()->
+    return App.Session.get('cookiesAccept')
+  ).property()
+  cookiesChange: (()->
+    @.set('cookies', App.Session.get('cookiesAccept'))
+  ).observes('App.Session.cookiesAccept')
   currentPathChanged: (()->
     Ember.run.next(()->
       if _paq?
@@ -6,3 +20,4 @@ module.exports = App.ApplicationController = Ember.Controller.extend
         _paq.push(['trackPageView',page])
     )
   ).observes('currentPath')
+)

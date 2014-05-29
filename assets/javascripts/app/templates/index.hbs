@@ -1,4 +1,3 @@
-{{view App.HeaderView}}
 {{#if App.Slider.FIXTURES}}
     {{view App.SliderView contentBinding="App.Slider.FIXTURES"}}
 {{else}}
@@ -6,11 +5,7 @@
     <img class="img-responsive" src="img/slider/zaslepka.jpg">
   </div>
 {{/if}}
-{{view App.NavbarView}}
 <div id="buttons" class="text-center col-xs-12">
-    <button class="btn btn-lg btn-primary col-xs-12 col-md-5" disabled="true">Szukaj Greetera<br>(Już wkrótce)</button>
+    {{#link-to 'search' class="btn btn-lg btn-primary col-xs-12 col-md-5" tagName="buttton"}}Szukaj Greetera{{/link-to}}
     {{#link-to 'signup' class="btn btn-lg btn-primary col-xs-12 col-md-5 col-md-offset-2" tagName="buttton"}}Zostań Greeterem!<br> {{/link-to}}
 </div>
-
-
- 
