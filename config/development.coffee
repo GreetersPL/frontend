@@ -1,5 +1,5 @@
 config = {
-	apiUrl: "http://bmarkowski-75131.euw1.nitrousbox.com:3001"
+	apiUrl: "http://api.greeters.dev:3000"
 	log_transition: false
 	log_transition_internal: false
 	location: 'hash'
