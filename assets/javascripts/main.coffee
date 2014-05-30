@@ -5,6 +5,7 @@ DS          = require 'emberdata'
 Bootstrap   = require 'bootstrap'
 _           = require 'lodash'
 Templates   = require './templates'
+datepicker  = require 'datepicker'
 config 		= require 'config'
 
 window.App = Ember.Application.create(
@@ -18,6 +19,7 @@ App.Router.reopen(
 )
 require './app/store'
 require './app/adapters'
+require './app/objects'
 
 require './app/controllers'
 require './app/views'
