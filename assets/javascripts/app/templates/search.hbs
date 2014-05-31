@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputDates" class="col-sm-2 col-sm-offset-1 control-label">Wybierz terminy kiedy jesteś zainteresowany wycieczką</label>
+    <label for="inputDates" class="col-sm-2 col-sm-offset-1 control-label">Kiedy jesteś zainteresowany spacerem?</label>
     <div class="col-sm-6">
       {{view "date-picker" dateBinding="dates" id="inputDates"}}
     </div>
@@ -39,7 +39,7 @@
   </div>
   </div>
   <div class="form-group">
-    <label for="inputLangs" class="col-sm-2 col-sm-offset-1 control-label">Wybierz języki w jakich byśmy mogli się dogadać<br> <small>Przytrzymaj CTRL aby zaznaczyć więcej niż jeden</small></label>
+    <label for="inputLangs" class="col-sm-2 col-sm-offset-1 control-label">Wybierz języki w jakich będziemy mogli się porozumieć<br> <small>Przytrzymaj CTRL aby zaznaczyć więcej niż jeden</small></label>
     <div class="col-sm-6">
         {{view Ember.Select id="inputLangs" multiple="true" contentBinding="langsAvalaible" optionLabelPath="content.pol" optionValuePath="content.value" selectionBinding="languages" class="form-control"}}
     </div>
