@@ -12,11 +12,13 @@ html
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     title Greeters Polska
-    meta(name="description",content="")
+    meta(name="description",content="Projekt Greeters Polska ma na celu rozpropagowanie w kraju idei pasjonatów swojego regionu. Poznaj z nami Gdańsk i pokaż go innym!")
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     link(rel='stylesheet', href='/stylesheets/style.css' + cachebust)
     script(async=true src='/javascripts/bundle.js' + cachebust)
-
+    meta(property="og:title", content="Greeters Polska")
+    meta(property="og:description", content="Projekt Greeters Polska ma na celu rozpropagowanie w kraju idei pasjonatów swojego regionu. Poznaj z nami Gdańsk i pokaż go innym!")
+    meta(property="og:image", content="http://greeters.pl/img/logo.png")
 
     if reload
       script(src='/socket.io/socket.io.js')
