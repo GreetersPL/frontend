@@ -1,4 +1,3 @@
-require './application'
 require './header'
 require './home'
 require './navbar'

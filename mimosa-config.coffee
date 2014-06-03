@@ -6,6 +6,7 @@ exports.config =
     "csslint"
     "jshint"
     "live-reload"
+    "sprite"
     "bower"
     "coffeescript"
     "ember-handlebars"
@@ -15,6 +16,7 @@ exports.config =
     "minify-js"
     "minify-css"
     "import-source"
+    
   ]
   template:
     nameTransform: (path) ->
@@ -50,7 +52,7 @@ exports.config =
         depends:
           ember: 'Ember'
       bootstrap:
-        path: 'javascripts/vendor/bootstrap/bootstrap'
+        path: 'javascripts/vendor/bootstrap-sass-official/bootstrap'
         exports: 'bootstrap'
         depends:
           jquery: '$'
@@ -60,7 +62,7 @@ exports.config =
         depends:
           jquery: '$'
       datepicker:
-        path: 'javascripts/vendor/bootstrap-datepicker/bootstrap-datepicker'
+        path: 'javascripts/vendor/bootstrap-sass-datepicker/bootstrap-sass-datepicker'
         exports: null
         depends:
           jquery: '$'
@@ -79,30 +81,44 @@ exports.config =
         'javascripts/vendor/ember/handlebars'
         'javascripts/vendor/ember/ember'
         'javascripts/vendor/ember-data/ember-data'
-        'javascripts/vendor/bootstrap/bootstrap'
-        'javascripts/vendor/bootrap-datepicker/bootstrap-datepicker'
+        'javascripts/vendor/bootstrap-sass-official/bootstrap'
       ]
-  bower:
-    copy:
-      mainOverrides:
-        'bootstrap': [
-           'dist/css/bootstrap.css',
-           'dist/js/bootstrap.js',
-           {'fonts': '../../fonts'}
-        ]
-  combine:
-    folders: [
-      {
-        folder:'stylesheets'
-        output:'stylesheets/style.css'
-        order: [
-          'vendor/bootstrap/bootstrap.css'
-          'app.css'
-        ]
-      }
-    ]
   importSource:
     copy: [
       from: "config/development.coffee"
       to: "assets/javascripts/config.coffee"
     ]
+  combine:
+    folders: [
+        folder: 'javascripts/vendor/bootstrap-sass-official'
+        output: 'javascripts/vendor/bootstrap-sass-official/bootstrap.js'
+        order: [
+          'affix.js',
+          'alert.js',
+          'button.js',
+          'carousel.js',
+          'collapse.js',
+          'dropdown.js',
+          'tab.js',
+          'transition.js',
+          'scrollspy.js',
+          'modal.js',
+          'tooltip.js',
+          'popover.js'
+        ]
+      ]
+  bower:
+    copy:
+      mainOverrides:
+        'bootstrap-sass-official': [
+           {'vendor/assets/stylesheets/bootstrap': './bootstrap-sass-official'}
+           {'vendor/assets/javascripts/bootstrap': './bootstrap-sass-official'}
+           {'vendor/assets/fonts': '../../fonts'}
+        ],
+  csslint:
+    compiled: false
+  sass:
+    includePaths: [
+      'assets/images/'
+    ]
+      

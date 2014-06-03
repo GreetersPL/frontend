@@ -5,9 +5,9 @@
     "jquery": "*",
     "ember": "~1.5.0",
     "ember-data": "~1.0",
-    "bootstrap": "~3.1.1",
+    "bootstrap-sass-official": "~3.1.1",
     "lodash": "~2.4.1",
     "jquery.serializeJSON": "~1.2.0",
-    "bootstrap-datepicker": "~1.3.0"
+    "bootstrap-sass-datepicker": "https://github.com/abnovak/bootstrap-sass-datepicker.git#67fac33ad4aad1c6b0413c01a10ee073cea4113b"
   }
 }

@@ -1,6 +1,6 @@
 module.exports = App.NavbarView = Ember.View.extend
   templateName: 'navbar'
-  classNames: ['col-xs-12', 'navbar', 'navbar-default']
+  classNames: ["navigation"]
   actions: 
     collapse: (e)->
       $(e).collapse('toggle')

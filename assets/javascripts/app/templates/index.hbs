@@ -2,11 +2,11 @@
     {{view App.SliderView contentBinding="App.Slider.FIXTURES"}}
 {{else}}
   <div class="noslider">
-    <img class="img-responsive" src="img/slider/zaslepka.jpg">
+    <img src="img/slider/zaslepka.jpg">
   </div>
 {{/if}}
-<div id="buttons" class="text-center col-xs-12">
-    {{#link-to 'search' class="btn btn-lg btn-primary col-xs-12 col-md-5" tagName="buttton"}}Szukaj Greetera{{/link-to}}
-    {{#link-to 'signup' class="btn btn-lg btn-primary col-xs-12 col-md-5 col-md-offset-2" tagName="buttton"}}Zostań Greeterem!<br> {{/link-to}}
+<div id="buttons">
+    {{#link-to 'search' tagName="button"}}Szukaj Greetera{{/link-to}}
+    {{#link-to 'signup' tagName="button"}}Zostań Greeterem!{{/link-to}}
 </div>
 
