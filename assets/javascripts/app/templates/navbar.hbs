@@ -6,7 +6,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-  <a href="#">Greeters Polska</a>
+  <a class="navbar-brand" href="#">Greeters Polska</a>
 </div>
 <nav class="navHeaderCollapse">
   <ul>
@@ -15,6 +15,9 @@
     {{/link-to}}
     {{#link-to 'who' tagName='li' href=false}}
       {{#link-to 'who' bubble='false'}}Kto to Greeter?{{/link-to}}
+    {{/link-to}}
+    {{#link-to 'faq' tagName='li' href=false}}
+      {{#link-to 'who' bubble='false'}}F.A.Q.{{/link-to}}
     {{/link-to}}
     {{#link-to 'signup' tagName='li' href=false}}
       {{#link-to 'signup' bubble='false'}}Zostań Greeterem!{{/link-to}}

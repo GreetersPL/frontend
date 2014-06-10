@@ -24,20 +24,20 @@ body {
     background-color: $gray-lighter;
 }
 
-html, body, #app {
+html, body, #app, main {
+    min-height: 100%;
     height: 100%;
 }
 
 #app{
-    @media (min-width: 769px){
-    margin-bottom: -70px;
+    margin-bottom: -80px;
+    height: auto !important;
     &::after{
-      height: 70px;
+      height: 80px;
       content: " ";
       float: left;
       width: 100%;
       clear: both;
-    }
     }
 }
 
@@ -48,9 +48,9 @@ header {
     @extend .col-xs-12, .col-md-6;
     text-indent: 100%;
     white-space: nowrap;
-	overflow: hidden;
+	  overflow: hidden;
     height: 100px;
-    background-size: 340px 135px;
+    background-size: 180px 125px;
     background-repeat: no-repeat;
     background-position: 0 -20px;
     cursor: pointer;
@@ -107,13 +107,12 @@ main {
 #buttons {
     @extend .col-xs-12;
     margin-top: 25px;
-    margin-bottom: 60px;
     button {
         @extend .btn, .btn-lg, .btn-primary, .col-xs-12, .col-md-5;
         @media (max-width: 768px){
             &:nth-of-type(1){
                 margin-bottom: 20px;
-            }    
+            }
         }
         &:nth-of-type(2){
             @extend .col-md-offset-2;
@@ -121,28 +120,51 @@ main {
     }
 }
 
+.who, .faq{
+  @extend .col-sm-6, .col-sm-push-3;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.search{
+  form {
+    @extend .form-horizontal;
+     & > div{
+      @extend .form-group;
+      label {
+        @extend .col-sm-2, .col-sm-offset-1, .control-label;
+      }
+      div{
+        @extend .col-sm-6;
+      }
+      input, textarea, option{
+        @extend .form-control;
+      }
+    }
+  }
+  .hours{
+    @extend .row;
+    div {
+      @extend .col-sm-4, .input-group;
+    }
+  }
+  button{
+    @extend .col-sm-offset-3, .btn, .btn-primary;
+  }
+}
 
 
 footer{
     @extend .col-xs-12, .text-center;
-    height: 60px;
+    height: 80px;
     a{
+        height: 100%;
+        width: 180px;
+        display: inline-block;
+        span {
         display: block;
         text-indent: 100%;
         white-space: nowrap;
-	   overflow: hidden;
+	       overflow: hidden;
+       }
     }
 }
 /*

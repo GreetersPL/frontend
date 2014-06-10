@@ -24,9 +24,15 @@ html
       script(src='/socket.io/socket.io.js')
       script(src='/javascripts/reload-client.js')
 
-  body
+  body(itemscope itemtype ="http://schema.org/NGO")
     #app
     footer
-      a.mwd(href="http://www.mlodziez.org.pl/") Młodzież w działaniu
-      a.flavio(href="http://www.flavionote.keed.pl/") Harcerski Krąg Akademicki 'Flavio Note'
-      a.chor(href="http://www.gdanska.zhp.pl/") Chorągiew Gdańska
+      a.mwd(href="http://www.mlodziez.org.pl/")
+        span Młodzież w działaniu
+        img(src="img/mwd.png", alt="Młodzież w działaniu")
+      a.flavio(href="http://www.flavionote.keed.pl/")
+        span Harcerski Krąg Akademicki 'Flavio Note'
+        img(src="img/flavio.png", alt="Harcerski Krąg Akademicki 'Flavio Note'")
+      a.chor(href="http://www.gdanska.zhp.pl/")
+        span Chorągiew Gdańska
+        img(src="img/choragiew.png", alt="Chorągiew Gdańska")
