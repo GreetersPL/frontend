@@ -6,7 +6,6 @@ exports.config =
     "csslint"
     "jshint"
     "live-reload"
-    "sprite"
     "bower"
     "coffeescript"
     "ember-handlebars"
@@ -16,7 +15,6 @@ exports.config =
     "minify-js"
     "minify-css"
     "import-source"
-    
   ]
   template:
     nameTransform: (path) ->
@@ -117,8 +115,3 @@ exports.config =
         ],
   csslint:
     compiled: false
-  sass:
-    includePaths: [
-      'assets/images/'
-    ]
-      

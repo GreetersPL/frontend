@@ -6,49 +6,51 @@
 {{#if success}}
   {{view "App.Alert" type="success" code="success" key="walk"}}
 {{/if}}
-<form class="form-horizontal" {{action "submitForm" on="submit"}} role="form">
-  <div class="form-group">
-    <label for="inputName" class="col-sm-2 col-sm-offset-1 control-label">Twoje imię</label>
-    <div class="col-sm-6">
-      {{input value=name placeholder="Imię" id="inputName" class="form-control" type="text"}}
+<form {{action "submitForm" on="submit"}} role="form">
+  <div>
+    <label for="inputName">Twoje imię</label>
+    <div>
+      {{input value=name placeholder="Imię" id="inputName" type="text"}}
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputEmail" class="col-sm-2 col-sm-offset-1 control-label">Twój email</label>
-    <div class="col-sm-6">
-      {{input value=email placeholder="Email" id="inputEmail" class="form-control" type="email"}}
+  <div>
+    <label for="inputEmail">Twój email</label>
+    <div>
+      {{input value=email placeholder="Email" id="inputEmail"type="email"}}
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputDates" class="col-sm-2 col-sm-offset-1 control-label">Kiedy jesteś zainteresowany spacerem?</label>
-    <div class="col-sm-6">
+  <div>
+    <label for="inputDates">Kiedy jesteś zainteresowany spacerem?</label>
+    <div>
       {{view "date-picker" dateBinding="dates" id="inputDates"}}
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputDates" class="col-sm-2 col-sm-offset-1 control-label">Wybierz godziny</label>
-    <div class="col-sm-6">
-      <div class="row">
-      <div class="col-sm-4">
-        {{input type="time" value=hourFrom id="inputHourFrom" placeholder="HH:MM" class="form-control"}}
+  <div>
+    <label for="inputDates">Wybierz godziny</label>
+    <div>
+      <div class="hours">
+      <div>
+        <span class="input-group-addon">Od</span>
+        {{input type="time" value=hourFrom id="inputHourFrom" placeholder="HH:MM"}}
       </div>
-      <div class="col-sm-4">
-       {{input type="time" value=hourTo id="inputHourTo" placeholder="HH:MM" class="form-control"}}
+      <div>
+        <span class="input-group-addon">Do</span>
+       {{input type="time" value=hourTo id="inputHourTo" placeholder="HH:MM"}}
      </div>
     </div>
   </div>
   </div>
-  <div class="form-group">
-    <label for="inputLangs" class="col-sm-2 col-sm-offset-1 control-label">Wybierz języki w jakich będziemy mogli się porozumieć<br> <small>Przytrzymaj CTRL aby zaznaczyć więcej niż jeden</small></label>
-    <div class="col-sm-6">
+  <div>
+    <label for="inputLangs">Wybierz języki w jakich będziemy mogli się porozumieć<br> <small>Przytrzymaj CTRL aby zaznaczyć więcej niż jeden</small></label>
+    <div>
         {{view Ember.Select id="inputLangs" multiple="true" contentBinding="langsAvalaible" optionLabelPath="content.pol" optionValuePath="content.value" selectionBinding="languages" class="form-control"}}
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputOther" class="col-sm-2 col-sm-offset-1 control-label">Jakieś dodatkowe uwagi?</label>
-    <div class="col-sm-6">
-      {{view Ember.TextArea class="form-control" valueBinding="other"}}
+  <div>
+    <label for="inputOther">Jakieś dodatkowe uwagi?</label>
+    <div>
+      {{view Ember.TextArea valueBinding="other"}}
   </div>
 </div>
-  <button type="submit" class="col-sm-offset-3 btn btn-primary" {{bind-attr disabled="isProcessing"}}>Wyślij</button>
+  <button type="submit" {{bind-attr disabled="isProcessing"}}>Wyślij</button>
 </form>

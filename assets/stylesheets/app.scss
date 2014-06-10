@@ -24,20 +24,20 @@ body {
     background-color: $gray-lighter;
 }
 
-html, body, #app {
+html, body, #app, main {
+    min-height: 100%;
     height: 100%;
 }
 
 #app{
-    @media (min-width: 769px){
-    margin-bottom: -70px;
+    margin-bottom: -80px;
+    height: auto !important;
     &::after{
-      height: 70px;
+      height: 80px;
       content: " ";
       float: left;
       width: 100%;
       clear: both;
-    }
     }
 }
 
@@ -48,9 +48,9 @@ header {
     @extend .col-xs-12, .col-md-6;
     text-indent: 100%;
     white-space: nowrap;
-	overflow: hidden;
+	  overflow: hidden;
     height: 100px;
-    background-size: 340px 135px;
+    background-size: 260px 125px;
     background-repeat: no-repeat;
     background-position: 0 -20px;
     cursor: pointer;
@@ -107,13 +107,12 @@ main {
 #buttons {
     @extend .col-xs-12;
     margin-top: 25px;
-    margin-bottom: 60px;
     button {
         @extend .btn, .btn-lg, .btn-primary, .col-xs-12, .col-md-5;
-        @media (max-width: 768px){
+        @media (max-width: 992px){
             &:nth-of-type(1){
                 margin-bottom: 20px;
-            }    
+            }
         }
         &:nth-of-type(2){
             @extend .col-md-offset-2;
@@ -121,38 +120,67 @@ main {
     }
 }
 
+.who, .faq{
+  @extend .col-sm-6, .col-sm-push-3;
+}
 
+.search{
+  @extend .col-xs-12;
+  form {
+    @extend .form-horizontal;
+     & > div{
+      @extend .form-group;
+      label {
+        @extend .col-sm-2, .col-sm-offset-1, .control-label;
+      }
+      div{
+        @extend .col-sm-6;
+      }
+      input, textarea {
+        @extend .form-control;
+      }
+    }
+    button{
+      @extend .col-sm-offset-3, .btn, .btn-primary;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
+  .datepicker{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    float: left;
+    width: auto;
+    padding: 0 0;
+  }
+  .hours{
+    @extend .col-xs-12;
+    div {
+      @extend .col-xs-12, .col-md-6, .input-group;
+    }
+  }
+}
 
 
 footer{
     @extend .col-xs-12, .text-center;
-    height: 60px;
+    height: 80px;
     a{
+        height: 100%;
+        width: 180px;
+        display: inline-block;
+        span {
         display: block;
         text-indent: 100%;
         white-space: nowrap;
-	   overflow: hidden;
+	       overflow: hidden;
+       }
     }
 }
-/*
-
-$jasnoszary: #f7f7f7;
-
-
-
 
 #likeBox {
+  @extend .col-xs-12;
   background-color: white;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -190,228 +218,3 @@ border-radius: 5px 0 0 5px;
   }
   }
 }
-footer {
-    display: block;
-    width:100%;
-}
-
-.slider {
-  padding-right: 0px;
-  padding-left: 0px;
-  .carousel-inner > .item > img {
-    max-width: 300%;
-    height: auto;
-    width: 100%;
-    height: 20vw;
-  }
-}
-#buttons {
-  margin-top: 60px;
-    button {
-      margin-bottom: 20px
-    }
-}
-
-.divisionIndex, .cordinatorAbout {
-  @media (min-width: 992px) {
-    .about{
-      h2 {
-        font-size: 40px
-      }
-
-    }
-  }
-  .member, .memberCordinator {
-    background-color: lighten($fioletowy, 20%);
-    padding: 20px;
-  -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-
-    &:before {
-          content: " ";
-      display: table;
-    }
-    &:after {
- content: " ";
-      display: table;
-      clear: both;
-
-    }
-    .aboutCordinator, .aboutMember {
-        text-align: justify;
-        padding-top: 10px;
-        }
-  }
-  .about {
-    background-color: $fioletowy;
-    color: white;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    height: 100%
-  }
-
-}
-
-.divisionsIndex{
-.cordinator {
-  @media (min-width: 992px) {
-    top: 130px;
-    position: absolute;
-    left: 50%;
-    h2 {
-      position: relative;
-      left: -50%;
-
-    }
-  a{display: block;
-    padding: 20px;
-        color: black;
-        text-decoration: none;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        &:hover{
-          background-color: lighten($fioletowy, 30%);
-        }
-      }
-
-  }
-
-}
-
-.division{
-  @media (min-width: 992px) {
-    position: absolute;
-    h2 {
-      position: relative;
-      a{
-        padding: 20px 10px;
-        color: black;
-        text-decoration: none;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        &:hover{
-          background-color: lighten($fioletowy, 30%);
-        }
-      }
-    }
-  &:nth-of-type(2){
-    left: 50%;
-    h2{
-      left: -50%;
-    }
-  }
-  &:nth-of-type(3){
-    left: 5%;
-    top: 150px;
-  h2 {
-    left: -5%;
-  }
-  }
-&:nth-of-type(4){
-    right: 5%;
-    top: 150px;
-  h2 {
-    right: -5%;
-  }
-  }
-&:nth-of-type(5){
-    left: 50%;
-    top: 300px;
-  h2 {
-    left: -50%;
-  }
-  }
-  }
-}
-}
-@media (min-width: 992px) {
-  divisionIndex {
-    height: 450px;
-  }
-}
-
-.divisionsIndex{
-.cordinator {
-  @media (min-width: 992px) {
-    top: 130px;
-    position: absolute;
-    left: 50%;
-    h2 {
-      position: relative;
-      left: -50%;
-
-    }
-  a{display: block;
-    padding: 20px;
-        color: black;
-        text-decoration: none;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        &:hover{
-          background-color: lighten($fioletowy, 30%);
-        }
-      }
-
-  }
-
-}
-
-.division{
-  @media (min-width: 992px) {
-    position: absolute;
-    h2 {
-      position: relative;
-      a{
-        padding: 20px 10px;
-        color: black;
-        text-decoration: none;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        &:hover{
-          background-color: lighten($fioletowy, 30%);
-        }
-      }
-    }
-  &:nth-of-type(2){
-    left: 50%;
-    h2{
-      left: -50%;
-    }
-  }
-  &:nth-of-type(3){
-    left: 5%;
-    top: 150px;
-  h2 {
-    left: -5%;
-  }
-  }
-&:nth-of-type(4){
-    right: 5%;
-    top: 150px;
-  h2 {
-    right: -5%;
-  }
-  }
-&:nth-of-type(5){
-    left: 50%;
-    top: 300px;
-  h2 {
-    left: -50%;
-  }
-  }
-  }
-}
-}
-@media (min-width: 992px) {
-  .divisionIndex, .divisionsIndex  {
-    min-height: 450px;
-  }
-}
-*/

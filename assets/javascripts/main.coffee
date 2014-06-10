@@ -17,6 +17,9 @@ require './app/router'
 App.Router.reopen(
   location: config.location
 )
+Ember.LinkView.reopen(
+  attributeBindings: ["itemprop"]
+)
 require './app/store'
 require './app/adapters'
 require './app/objects'
