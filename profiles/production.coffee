@@ -1,18 +1,15 @@
 exports.config =
   modules: [
     "server-template-compile"
-    "server"
     "browserify"
     "bower"
     "coffeescript"
     "ember-handlebars"
     "copy"
     "sass"
-    "combine"
-    "minify-js"
-    "minify-css"
-    "live-reload"
     "import-source"
+    "server"
+    "combine"
   ]
 
   coffeescript:
