@@ -10,6 +10,8 @@ exports.config =
     "import-source"
     "server"
     "combine"
+    "minify-js"
+    "minify-img"
   ]
 
   coffeescript:
